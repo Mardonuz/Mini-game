@@ -249,7 +249,7 @@ function setupMultiplayer() {
   room = params.get("room") || "default";
 
   // Server address from URL param or default to Render URL
-  const serverUrl = params.get("server") || "wss://mini-royale-backend.onrender.com";
+  const serverUrl = params.get("server") || "wss://mini-game-gvpz.onrender.com";
 
   const vol = parseFloat(params.get("vol") || "0.12");
   if (!isNaN(vol)) setMasterVolume(vol);
