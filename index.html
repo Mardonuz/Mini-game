@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Royale</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="top-bar">
+            <div class="status">
+                <span id="player-king-hp">Siz: King 0</span>
+                <span id="player-top-hp">Top 0</span>
+                <span id="player-bottom-hp">Bottom 0</span>
+                <span style="opacity:0.6;">|</span>
+                <span id="enemy-king-hp">Raqib: King 0</span>
+                <span id="enemy-top-hp">Top 0</span>
+                <span id="enemy-bottom-hp">Bottom 0</span>
+            </div>
+            <div class="controls">
+                <button id="start-btn">Boshlash</button>
+                <button id="restart-btn" disabled>Qayta boshlash</button>
+                <input id="room-input" class="input" placeholder="Room" />
+                <button id="connect-btn">Ulanish</button>
+                <label class="volume">
+                    Vol
+                    <input id="vol-range" type="range" min="0" max="1" step="0.01" value="0.12" />
+                </label>
+                <button id="mute-btn">Mute</button>
+                <button id="test-btn">Test</button>
+            </div>
+        </div>
+        <div class="side-panel">
+            <div id="room-info" class="panel-section">
+                <strong>Room:</strong> <span id="current-room">None</span><br />
+                <strong>ID:</strong> <span id="client-id">-</span><br />
+                <strong>Token:</strong> <span id="token-exp">-</span>
+            </div>
+            <div id="room-list-box" class="panel-section">
+                <strong>Active Rooms</strong>
+                <div id="room-list"></div>
+                <button id="refresh-rooms-btn">Refresh</button>
+            </div>
+            <div id="audio-panel" class="panel-section">
+                <strong>Music</strong>
+                <div class="track-ctrl">
+                    <span>Battle:</span>
+                    <button id="mute-bgm-btn">Mute</button>
+                </div>
+                <div class="track-ctrl">
+                    <span>Menu:</span>
+                    <button id="mute-menu-btn">Mute</button>
+                </div>
+            </div>
+        </div>
+        <canvas id="game" width="900" height="600"></canvas>
+        <div class="bottom-bar">
+            <div class="elixir">
+                <div id="elixir-label">Elixir: 0/10</div>
+                <div class="bar">
+                    <div id="elixir-bar"></div>
+                </div>
+            </div>
+            <div class="cards" id="cards"></div>
+        </div>
+        <div class="overlay" id="overlay" hidden></div>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
